@@ -11,6 +11,7 @@ kubectl get no
 helm repo add eks https://aws.github.io/eks-charts
 
 # AWS Load Balancer Ingress Controller 설치 
+# !! 590974975982 부분은 본인 AWS 계정으로 변경
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   -n kube-system --set clusterName=k8s-demo --set serviceAccount.create=true \
   --set serviceAccount.name=aws-load-balancer-controller \
